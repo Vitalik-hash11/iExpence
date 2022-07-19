@@ -13,6 +13,7 @@
 		DD696EC32884AE53006B2A5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD696EC22884AE53006B2A5D /* Preview Assets.xcassets */; };
 		DDB480D72887458A00AB40F9 /* ExpenceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB480D62887458A00AB40F9 /* ExpenceItem.swift */; };
 		DDB480D9288745C500AB40F9 /* Expences.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB480D8288745C500AB40F9 /* Expences.swift */; };
+		DDB480DB288749EF00AB40F9 /* AddExpenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB480DA288749EF00AB40F9 /* AddExpenceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		DD696EC22884AE53006B2A5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DDB480D62887458A00AB40F9 /* ExpenceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenceItem.swift; sourceTree = "<group>"; };
 		DDB480D8288745C500AB40F9 /* Expences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expences.swift; sourceTree = "<group>"; };
+		DDB480DA288749EF00AB40F9 /* AddExpenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				DD696EBB2884AE4F006B2A5D /* iExpenceApp.swift */,
 				DD696EBD2884AE4F006B2A5D /* ContentView.swift */,
+				DDB480DA288749EF00AB40F9 /* AddExpenceView.swift */,
 				DDB480D62887458A00AB40F9 /* ExpenceItem.swift */,
 				DDB480D8288745C500AB40F9 /* Expences.swift */,
 				DD696EBF2884AE53006B2A5D /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			files = (
 				DDB480D9288745C500AB40F9 /* Expences.swift in Sources */,
 				DD696EBE2884AE4F006B2A5D /* ContentView.swift in Sources */,
+				DDB480DB288749EF00AB40F9 /* AddExpenceView.swift in Sources */,
 				DD696EBC2884AE4F006B2A5D /* iExpenceApp.swift in Sources */,
 				DDB480D72887458A00AB40F9 /* ExpenceItem.swift in Sources */,
 			);
