@@ -8,9 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var expences = Expences()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(expences.items) { item in
+                    Text(item.name)
+                }
+                .onDelete { indexSet in
+                    expences.items.remove(atOffsets: indexSet)
+                }
+            }
+            .navigationTitle("iExpence")
+            .toolbar {
+                Button {
+                    let expence = ExpenceItem(name: "Grosseries", type: "Personal", amount: 20.2)
+                    expences.items.append(expence)
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+        }
     }
 }
 
