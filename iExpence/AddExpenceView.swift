@@ -16,15 +16,25 @@ struct AddExpenceView: View {
     @State private var type = ""
     @State private var amount = 0.0
     
+    let types = ["Business", "Personal"]
+    
     var body: some View {
         NavigationView {
             Form {
                 TextField("Name", text: $name)
-                TextField("Type", text: $type)
-                TextField("Amount", value: $amount, format: .currency(code: "USD"))
+                Picker("Type", selection: $type) {
+                    ForEach(types, id: \.self) { type in
+                        Text(type)
+                    }
+                }
+                TextField("Amount", value: $amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                     .keyboardType(.decimalPad)
                 Button("Add") {
-                    expences.items.append(ExpenceItem(name: name, type: type, amount: amount))
+                    if type == "Personal" {
+                        expences.personalExpences.append(ExpenceItem(name: name, type: type, amount: amount))
+                    } else {
+                        expences.businessExpences.append(ExpenceItem(name: name, type: type, amount: amount))
+                    }
                     dismiss()
                 }
             }
