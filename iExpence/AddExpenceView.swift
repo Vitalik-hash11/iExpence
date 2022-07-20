@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct AddExpenceView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @ObservedObject var expences: Expences
     @State private var name = ""
     @State private var type = ""
@@ -23,6 +25,7 @@ struct AddExpenceView: View {
                     .keyboardType(.decimalPad)
                 Button("Add") {
                     expences.items.append(ExpenceItem(name: name, type: type, amount: amount))
+                    dismiss()
                 }
             }
             .navigationTitle("Add new expence")

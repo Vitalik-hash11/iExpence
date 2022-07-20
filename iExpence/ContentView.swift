@@ -15,7 +15,14 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(expences.items) { item in
-                    Text(item.name)
+                    HStack {
+                        VStack(spacing: 10) {
+                            Text(item.name)
+                            Text(item.type)
+                        }
+                        Spacer()
+                        Text(String(item.amount))
+                    }
                 }
                 .onDelete { indexSet in
                     expences.items.remove(atOffsets: indexSet)
@@ -24,8 +31,6 @@ struct ContentView: View {
             .navigationTitle("iExpence")
             .toolbar {
                 Button {
-//                    let expence = ExpenceItem(name: "Grosseries", type: "Personal", amount: 20.2)
-//                    expences.items.append(expence)
                     isSheetShown = true
                 } label: {
                     Image(systemName: "plus")
